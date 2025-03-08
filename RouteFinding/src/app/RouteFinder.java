@@ -52,7 +52,7 @@ public class RouteFinder {
         }
     }
 
-    /** Load adjacency list from file */
+    //Load adjacency list from file 
     private static void loadAdjacencies(String filePath) {
         try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
             String line;
@@ -70,7 +70,7 @@ public class RouteFinder {
         }
     }
 
-    /** Load city coordinates from file */
+    // Load city coordinates from file 
     private static void loadCoordinates(String filePath) {
         try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
             String line;
@@ -89,12 +89,12 @@ public class RouteFinder {
         }
     }
 
-    /** Brute-force search */
+    // Brute-force search 
     private static List<String> bruteForce(String start, String goal) {
         return bfs(start, goal); // Placeholder: BFS is a common brute-force approach
     }
 
-    /** Breadth-First Search (BFS) */
+    //Breadth-First Search (BFS) 
     private static List<String> bfs(String start, String goal) {
         Queue<List<String>> queue = new LinkedList<>();
         Set<String> visited = new HashSet<>();
@@ -117,7 +117,7 @@ public class RouteFinder {
         return null;
     }
 
-    /** Depth-First Search (DFS) */
+    // Depth-First Search (DFS)
     private static List<String> dfs(String start, String goal) {
         Stack<List<String>> stack = new Stack<>();
         Set<String> visited = new HashSet<>();
@@ -140,7 +140,7 @@ public class RouteFinder {
         return null;
     }
 
-    /** Iterative Deepening DFS (ID-DFS) */
+    // Iterative Deepening DFS (ID-DFS) 
     private static List<String> iddfs(String start, String goal) {
         int depth = 0;
         while (true) {
@@ -166,7 +166,7 @@ public class RouteFinder {
         return null;
     }
 
-    /** Best-First Search (uses heuristic: latitude & longitude) */
+    // Best-First Search (uses heuristic: latitude & longitude) 
     private static List<String> bestFirstSearch(String start, String goal) {
         PriorityQueue<Node> pq = new PriorityQueue<>(Comparator.comparingDouble(Node::getHeuristic));
         Set<String> visited = new HashSet<>();
@@ -200,7 +200,7 @@ public class RouteFinder {
         return null;
     }
 
-    /** A* Search */
+    // A* Search 
     private static List<String> aStarSearch(String start, String goal) {
         PriorityQueue<Node> pq = new PriorityQueue<>(Comparator.comparingDouble(Node::getTotalCost));
         Set<String> visited = new HashSet<>();
@@ -235,7 +235,7 @@ public class RouteFinder {
         return null;
     }
 
-    /** Calculate distance using Haversine formula */
+    //Calculate distance using Haversine formula 
     private static double calculateTotalDistance(List<String> path) {
         double distance = 0;
         for (int i = 0; i < path.size() - 1; i++) {
@@ -268,7 +268,7 @@ public class RouteFinder {
         return R * c; // Distance in km
     }
 
-    /** Node class for Best-First and A* search algorithms */
+    // Node class for Best-First and A* search algorithms 
     private static class Node {
         String city;
         Node parent;
