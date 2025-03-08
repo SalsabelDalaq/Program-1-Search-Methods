@@ -1,6 +1,4 @@
-# Program-1-Search-Methods
-
-# Route Finder
+# Program-1-Search-Methods/Route Finder
 
 This program finds a route between two cities using different search algorithms. It allows users to choose from multiple methods to find the shortest path in a small network of cities.
 
