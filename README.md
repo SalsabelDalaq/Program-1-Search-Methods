@@ -11,7 +11,7 @@ This program finds a route between two cities using different search algorithms.
 
 ## Implemented Algorithms
 
-- **Brute-Force**: Uses BFS as a simple approach to find a path.
+- **Brute-Force**: BFS is used as a simple approach to finding a path.
 - **BFS**: Finds the shortest path by exploring all nodes level by level.
 - **DFS**: Explores paths depth-first to find a route.
 - **ID-DFS**: Iterative deepening of DFS to avoid deep recursion.
@@ -22,7 +22,7 @@ This program finds a route between two cities using different search algorithms.
 
 **Input**:
 - Start and destination cities.
-- Selection of search method (Brute-Force, BFS, DFS, ID-DFS, Best-First, or A*).
+- Select a search method (Brute-Force, BFS, DFS, ID-DFS, Best-First, or A*).
 
 **Output**:
 - The route from the start city to the destination city.
